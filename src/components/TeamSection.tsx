@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { AnimatedSection } from "./AnimatedSection";
 import { FaGithub, FaLinkedin } from "react-icons/fa"; // Placeholder icons for social media
+import maazImage from "../assets/maaz.jpg"; // Import the image
 
 interface TeamMemberProps {
   name: string;
@@ -94,7 +95,7 @@ export const TeamSection = () => {
           <TeamMemberCard
             name="Umar Maaz"
             role="System Developer & IoT Integration Lead"
-            avatarSrc="https://via.placeholder.com/150/0000FF/FFFFFF?text=UM" // Placeholder image
+            avatarSrc={maazImage} // Use the imported image
             githubUrl="https://github.com/umarmaaz" // Example URL
             linkedinUrl="https://linkedin.com/in/umarmaaz" // Example URL
             delay={0.6}

@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 4%;
+    --foreground: 0 0% 98%;
+
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 6%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 24 100% 50%;
+    --primary-foreground: 0 0% 0%;
+
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 65%;
+
+    --accent: 24 100% 50%;
+    --accent-foreground: 0 0% 0%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 24 100% 50%;
+
+    --radius: 0.75rem;
+
+    /* Custom VITABAND colors - Futuristic Palette */
+    --electric-blue: 187 100% 50%;
+    --neon-orange: 24 100% 50%;
+    --deep-gray: 220 13% 18%;
+    --coal-black: 0 0% 4%;
+    --mine-gray: 220 13% 10%;
+    --danger-red: 0 84% 60%;
+    --safe-green: 142 76% 36%;
+    --glow-cyan: 180 100% 50%;
+
+    /* Gradients - Futuristic */
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 4%), hsl(220 13% 10%), hsl(187 100% 20%));
+    --gradient-glow: radial-gradient(circle at center, hsl(187 100% 50% / 0.3), transparent);
+    --gradient-danger: linear-gradient(90deg, hsl(0 84% 60%), hsl(24 100% 50%));
+    --gradient-cyber: linear-gradient(45deg, hsl(187 100% 50% / 0.1), hsl(24 100% 50% / 0.1));
+
+    /* Shadows & Glows - Futuristic */
+    --shadow-orange: 0 0 30px hsl(24 100% 50% / 0.4);
+    --shadow-blue: 0 0 30px hsl(187 100% 50% / 0.5);
+    --shadow-cyan: 0 0 40px hsl(180 100% 50% / 0.6);
+    --shadow-deep: 0 20px 50px hsl(0 0% 0% / 0.8);
+    --glow-text: drop-shadow(0 0 10px hsl(187 100% 50% / 0.8));
+    
+    /* Transitions */
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', sans-serif;
+  }
+}

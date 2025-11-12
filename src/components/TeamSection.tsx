@@ -34,7 +34,7 @@ const TeamMemberCard = ({ name, role, avatarSrc, githubUrl, linkedinUrl, delay }
         <img
           src={avatarSrc}
           alt={name}
-          className="w-40 h-40 rounded-full object-cover mb-4 border-2 border-primary shadow-lg"
+          className="w-40 h-40 rounded-full object-contain mb-4 border-2 border-primary shadow-lg"
         />
         <h3 className="text-2xl font-bold text-foreground mb-1">{name}</h3>
         <p className="text-primary text-sm mb-4">{role}</p>

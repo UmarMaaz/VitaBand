@@ -11,9 +11,10 @@ interface TeamMemberProps {
   githubUrl?: string;
   linkedinUrl?: string;
   delay: number;
+  imagePosition?: string; // Add this line
 }
 
-const TeamMemberCard = ({ name, role, avatarSrc, githubUrl, linkedinUrl, delay }: TeamMemberProps) => {
+const TeamMemberCard = ({ name, role, avatarSrc, githubUrl, linkedinUrl, delay, imagePosition }: TeamMemberProps) => {
   const { ref, inView } = useInView({
     triggerOnce: true,
     threshold: 0.1,
@@ -34,7 +35,7 @@ const TeamMemberCard = ({ name, role, avatarSrc, githubUrl, linkedinUrl, delay }
         <img
           src={avatarSrc}
           alt={name}
-          className="w-48 h-48 rounded-full object-cover mb-4 border-2 border-primary shadow-lg"
+          className={`w-48 h-48 rounded-full object-cover mb-4 border-2 border-primary shadow-lg ${imagePosition}`}
         />
         <h3 className="text-2xl font-bold text-foreground mb-1">{name}</h3>
         <p className="text-primary text-sm mb-4">{role}</p>
@@ -99,10 +100,11 @@ export const TeamSection = () => {
             githubUrl="https://github.com/umarmaaz" // Example URL
             linkedinUrl="https://linkedin.com/in/umarmaaz" // Example URL
             delay={0.6}
+            imagePosition="object-top" // Add object-position: top
           />
           <TeamMemberCard
             name="Hina Khan"
-            role="Data Analyst & Research Contributor"
+            role="UI/UX Designer, Documentation Support" // Updated role
             avatarSrc="https://via.placeholder.com/150/FFAA00/FFFFFF?text=HK" // Placeholder image
             delay={0.8}
           />

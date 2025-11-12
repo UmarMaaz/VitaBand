@@ -34,7 +34,7 @@ const TeamMemberCard = ({ name, role, avatarSrc, githubUrl, linkedinUrl, delay }
         <img
           src={avatarSrc}
           alt={name}
-          className="w-32 h-32 rounded-full object-cover mb-4 border-2 border-primary shadow-lg"
+          className="w-40 h-40 rounded-full object-cover mb-4 border-2 border-primary shadow-lg"
         />
         <h3 className="text-2xl font-bold text-foreground mb-1">{name}</h3>
         <p className="text-primary text-sm mb-4">{role}</p>
@@ -81,7 +81,7 @@ export const TeamSection = () => {
           The innovators behind VITABAND, dedicated to empowering safety and preserving lives.
         </motion.p>
 
-        <div ref={ref} className="grid md:grid-cols-2 gap-12 relative justify-center">
+        <div ref={ref} className="grid md:grid-cols-2 gap-16 relative justify-center">
           {/* Network lines - conceptual, can be implemented with SVG/CSS later */}
           <div className="absolute inset-0 flex items-center justify-center z-0">
             <motion.div

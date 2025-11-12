@@ -1,13 +1,13 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import vitaImage from "../assets/vita.png"; // Import the vita.png image
 
 gsap.registerPlugin(ScrollTrigger);
 
 export const HeroSection = () => {
   const heroRef = useRef<HTMLDivElement>(null);
   const logoRef = useRef<HTMLDivElement>(null);
-  const torchRef = useRef<HTMLSpanElement>(null);
   const taglineRef = useRef<HTMLParagraphElement>(null);
   const particlesRef = useRef<HTMLDivElement>(null);
 
@@ -19,15 +19,6 @@ export const HeroSection = () => {
         scale: 0.5,
         duration: 1.5,
         ease: "power3.out"
-      });
-
-      // Torch glow animation
-      gsap.to(torchRef.current, {
-        textShadow: "0 0 30px hsl(187 100% 50%), 0 0 60px hsl(187 100% 50%)",
-        duration: 2,
-        repeat: -1,
-        yoyo: true,
-        ease: "sine.inOut"
       });
 
       // Tagline fade in
@@ -95,18 +86,13 @@ export const HeroSection = () => {
       </div>
 
       <div ref={logoRef} className="relative z-10 text-center px-4">
-        {/* Main Logo */}
-        <h1 className="text-7xl md:text-9xl font-black mb-8 tracking-tight">
-          V
-          <span
-            ref={torchRef}
-            className="inline-block text-electric-blue"
-            style={{ filter: "drop-shadow(0 0 20px hsl(187 100% 50%))" }}
-          >
-            I
-          </span>
-          TABAND
-        </h1>
+        {/* Main Logo Image */}
+        <img
+          src={vitaImage}
+          alt="VITABAND Logo"
+          className="mx-auto mb-8 w-64 md:w-96 drop-shadow-glow" // Adjust size as needed
+          style={{ filter: "drop-shadow(0 0 20px hsl(187 100% 50%))" }} // Apply glow effect
+        />
 
         {/* Underline */}
         <div className="w-48 h-1 bg-gradient-to-r from-transparent via-electric-blue to-transparent mx-auto mb-12" />

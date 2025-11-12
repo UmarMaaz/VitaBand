@@ -100,9 +100,9 @@ export const TeamSection = () => {
             delay={0.6}
           />
           <TeamMemberCard
-            name="Your Partner’s Name"
+            name="Hina Khan"
             role="Data Analyst & Research Contributor"
-            avatarSrc="https://via.placeholder.com/150/FFAA00/FFFFFF?text=PN" // Placeholder image
+            avatarSrc="https://via.placeholder.com/150/FFAA00/FFFFFF?text=HK" // Placeholder image
             delay={0.8}
           />
         </div>

@@ -108,13 +108,6 @@ export const HeroSection = () => {
         <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
           A smart safety band designed for miners — where every second counts.
         </p>
-
-        {/* Scroll indicator */}
-        <div className="absolute bottom-12 left-1/2 -translate-x-1/2 animate-bounce">
-          <div className="w-6 h-10 border-2 border-electric-blue rounded-full flex items-start justify-center p-2">
-            <div className="w-1 h-3 bg-electric-blue rounded-full animate-pulse" />
-          </div>
-        </div>
       </div>
     </section>
   );

@@ -97,8 +97,6 @@ export const TeamSection = () => {
             name="Umar Maaz"
             role="System Developer & IoT Integration Lead"
             avatarSrc={maazImage} // Use the imported image
-            githubUrl="https://github.com/umarmaaz" // Example URL
-            linkedinUrl="https://linkedin.com/in/umarmaaz" // Example URL
             delay={0.6}
             imagePosition="object-top" // Add object-position: top
           />

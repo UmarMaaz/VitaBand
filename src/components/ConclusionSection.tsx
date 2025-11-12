@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import minerSilhouette from "@/assets/miner-silhouette.png";
+import vitaImage from "../assets/vita.png"; // Import the vita.png image
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -62,14 +63,7 @@ export const ConclusionSection = () => {
         ease: "elastic.out(1, 0.5)",
       });
 
-      // Torch glow
-      gsap.to(logoRef.current?.querySelector(".torch"), {
-        textShadow: "0 0 40px hsl(187 100% 50%), 0 0 80px hsl(187 100% 50%)",
-        duration: 2,
-        repeat: -1,
-        yoyo: true,
-        ease: "sine.inOut",
-      });
+      // No torch glow animation for image logo
     }, sectionRef);
 
     return () => ctx.revert();
@@ -116,16 +110,12 @@ export const ConclusionSection = () => {
 
         {/* Final logo */}
         <div ref={logoRef} className="text-center">
-          <h1 className="text-6xl md:text-7xl font-black mb-4">
-            V
-            <span
-              className="torch inline-block text-electric-blue"
-              style={{ filter: "drop-shadow(0 0 20px hsl(187 100% 50%))" }}
-            >
-              I
-            </span>
-            TABAND
-          </h1>
+          <img
+            src={vitaImage}
+            alt="VITABAND Logo"
+            className="mx-auto mb-4 w-48 md:w-64 drop-shadow-glow" // Adjust size as needed
+            style={{ filter: "drop-shadow(0 0 20px hsl(187 100% 50%))" }} // Apply glow effect
+          />
           <p className="text-xl text-muted-foreground">
             Smarter. Safer. Stronger.
           </p>

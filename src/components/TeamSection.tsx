@@ -26,7 +26,7 @@ const TeamMemberCard = ({ name, role, avatarSrc, githubUrl, linkedinUrl, delay }
       animate={inView ? { opacity: 1, y: 0, rotateY: 0 } : {}}
       whileHover={{ rotateY: 10, boxShadow: "0 0 40px hsl(240 100% 70% / 0.4)" }}
       transition={{ duration: 0.6, delay, ease: "easeOut" }}
-      className="bg-card border border-border rounded-xl p-6 flex flex-col items-center relative overflow-hidden group"
+      className="bg-card border border-border rounded-xl p-8 flex flex-col items-center relative overflow-hidden group"
       style={{ perspective: "1000px" }}
     >
       <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -34,7 +34,7 @@ const TeamMemberCard = ({ name, role, avatarSrc, githubUrl, linkedinUrl, delay }
         <img
           src={avatarSrc}
           alt={name}
-          className="w-40 h-40 rounded-full object-contain mb-4 border-2 border-primary shadow-lg"
+          className="w-48 h-48 rounded-full object-cover mb-4 border-2 border-primary shadow-lg"
         />
         <h3 className="text-2xl font-bold text-foreground mb-1">{name}</h3>
         <p className="text-primary text-sm mb-4">{role}</p>

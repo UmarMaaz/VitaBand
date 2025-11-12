@@ -104,7 +104,7 @@ export const TeamSection = () => {
           />
           <TeamMemberCard
             name="Hina Khan"
-            role="UI/UX Designer, Documentation Support" // Updated role
+            role="UI/UX Designer, Research Lead, Data Analysis, Documentation Support" // Updated role
             avatarSrc="https://via.placeholder.com/150/FFAA00/FFFFFF?text=HK" // Placeholder image
             delay={0.8}
           />
